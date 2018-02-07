@@ -10,16 +10,47 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var userGuessLabel: UILabel!
+    @IBOutlet weak var guessedLetterField: UITextField!
+    @IBOutlet weak var theGuessCountLabel: UILabel!
+    @IBOutlet weak var guessLetterButton: UIButton!
+    @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        guessLetterButton.isEnabled = false
+        playAgainButton.isHidden = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func updateUIAfterGuess () {
+        guessedLetterField.resignFirstResponder()
+        guessedLetterField.text = ""}
+    
+    @IBAction func guessedLetterFieldChanged(_ sender: UITextField) {
+        if let letterGuessed = guessedLetterField.text?.last {
+            guessedLetterField.text = "\(letterGuessed)"
+            guessLetterButton.isEnabled = true
+        } else {
+            guessLetterButton.isEnabled = false
     }
-
-
+        
+    
 }
+    
+    @IBAction func doneKeyPressed(_ sender: UITextField) {
+        updateUIAfterGuess()
+        
+    }
+    
+    @IBAction func guessLetterButtonPressed(_ sender: UIButton) {
+       updateUIAfterGuess()
+    }
+    
+    @IBAction func playAgainButtonPressed(_ sender: Any) {
+    }
+    
+}
+https://github.com/iOS-Swift-Spring2018/word-garden-cnewlove.git
+
 
