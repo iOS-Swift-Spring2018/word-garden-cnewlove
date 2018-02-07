@@ -30,67 +30,77 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="_ _ _ _ _" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeE-lR-vfr">
-                                <rect key="frame" x="16" y="119" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeE-lR-vfr">
+                                <rect key="frame" x="16" y="119" width="343" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-tw-yaC">
-                                <rect key="frame" x="133" y="187" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJl-tw-yaC">
+                                <rect key="frame" x="100" y="170" width="175" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fg2-JY-UjC" userLabel="Guessed Letter Field">
-                                        <rect key="frame" x="0.0" y="0.0" width="12" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fg2-JY-UjC" userLabel="Guessed Letter Field">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="usO-z1-5J9"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
-                                            <action selector="doneKeyPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="uZr-Jn-vYl"/>
-                                            <action selector="guessedLetterFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="FdF-1K-EEX"/>
+                                            <action selector="doneKeyPressed:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="qTE-We-1Yf"/>
+                                            <action selector="guessedLetterFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="PlU-ZP-IrP"/>
+                                            <action selector="guessedLetterFieldChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="w2X-wk-Ter"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKk-oE-WIJ" userLabel="Guess Letter Button">
-                                        <rect key="frame" x="12" y="0.0" width="121" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKk-oE-WIJ" userLabel="Guess Letter Button">
+                                        <rect key="frame" x="30" y="0.0" width="145" height="30"/>
                                         <state key="normal" title="Guess This Letter"/>
                                         <connections>
-                                            <action selector="guessLetterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U02-kI-pbV"/>
+                                            <action selector="guessLetterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yqq-fp-eMY"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You've Made 0 Guesses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DM-E1-A1D" userLabel="The Guess Count Label">
-                                <rect key="frame" x="105" y="237" width="183" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've Made 0 Guesses" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DM-E1-A1D" userLabel="The Guess Count Label">
+                                <rect key="frame" x="88" y="219" width="199" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEZ-BB-fSX">
-                                <rect key="frame" x="133" y="295" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play Again"/>
-                                <connections>
-                                    <action selector="playAgainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zxt-ck-m1j"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flower8" translatesAutoresizingMaskIntoConstraints="NO" id="wbQ-qL-Vmr">
                                 <rect key="frame" x="16" y="340" width="343" height="307"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEZ-BB-fSX">
+                                <rect key="frame" x="133" y="266" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgainButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="78t-GY-Yz6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aJl-tw-yaC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="2cT-B3-5Sr"/>
+                            <constraint firstItem="6DM-E1-A1D" firstAttribute="top" secondItem="aJl-tw-yaC" secondAttribute="bottom" constant="19" id="CdT-DS-vp9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6DM-E1-A1D" secondAttribute="trailing" constant="88" id="Gg6-9n-j1a"/>
+                            <constraint firstItem="aJl-tw-yaC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="LwI-kT-znz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aJl-tw-yaC" secondAttribute="trailing" constant="100" id="NXG-2o-Krt"/>
+                            <constraint firstItem="6DM-E1-A1D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="aI5-2e-lfG"/>
+                            <constraint firstItem="dKk-oE-WIJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="167" id="wXm-7B-3hj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="guessLetterButton" destination="dKk-oE-WIJ" id="WKT-Ii-nKx"/>
-                        <outlet property="guessedLetterField" destination="fg2-JY-UjC" id="cgu-3P-nAR"/>
-                        <outlet property="imageView" destination="wbQ-qL-Vmr" id="GLg-bz-RJj"/>
-                        <outlet property="playAgainButton" destination="rEZ-BB-fSX" id="UUs-nq-xHO"/>
-                        <outlet property="theGuessCountLabel" destination="6DM-E1-A1D" id="UQF-Go-yla"/>
-                        <outlet property="theGuessLetterButton" destination="dKk-oE-WIJ" id="iJb-fW-P7b"/>
-                        <outlet property="userGuessLabel" destination="XeE-lR-vfr" id="MXn-gC-hxT"/>
+                        <outlet property="guessLetterButton" destination="dKk-oE-WIJ" id="KyE-ai-tUI"/>
+                        <outlet property="guessedLetterField" destination="fg2-JY-UjC" id="jkM-Go-qur"/>
+                        <outlet property="imageView" destination="wbQ-qL-Vmr" id="fIE-oJ-Q5C"/>
+                        <outlet property="playAgainButton" destination="rEZ-BB-fSX" id="LGn-O5-V0e"/>
+                        <outlet property="theGuessCountLabel" destination="6DM-E1-A1D" id="Zmd-4A-dGP"/>
+                        <outlet property="userGuessLabel" destination="XeE-lR-vfr" id="8ck-bx-2Be"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
