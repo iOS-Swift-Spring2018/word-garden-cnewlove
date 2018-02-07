@@ -51,6 +51,6 @@ class ViewController: UIViewController {
     }
     
 }
-https://github.com/iOS-Swift-Spring2018/word-garden-cnewlove.git
+
 
 
